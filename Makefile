@@ -7,7 +7,7 @@ docker-run:
 		-e DOCKER_CONTAINER_NAME=MY_CONTAINER_NAME \
 		--gpus all \
 		-v `pwd`:`pwd` \
-		--name Ubuntu-18 \
+		--name shape_comp_net_container \
 		-it \
 		--workdir /home/elyar/thesis/ \
 		ezavvari/shape_comp_net
