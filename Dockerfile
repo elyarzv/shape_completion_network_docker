@@ -36,14 +36,12 @@ RUN apt update -y && \
     apt install build-essential -y && \
     apt-get -y install python3-pip && \
     apt update && \
-#    apt install python3-pip && \
-    
+    #apt install python3-pip && \
     # installing pip
     wget https://bootstrap.pypa.io/pip/2.7/get-pip.py && \
     chmod +x get-pip.py && \
     python3 get-pip.py && \
     rm -rf get-pip.py && \
-    
     pip install pcl && \
     # the following packages are needed for binvox
     apt install libglu1-mesa -y && \
@@ -51,6 +49,8 @@ RUN apt update -y && \
     pip install PyYAML && \
     pip install cython && \
     pip install plyfile && \
+    #installing catkin packages
+    pip install -U catkin_pkg
     
 
     
@@ -65,7 +65,7 @@ ENV ROS_DISTRO melodic
     
 
 # setup entrypoint
-COPY ./ros_entrypoint.sh /
+COPY ./entrypoint.sh /
 
 
 
@@ -76,5 +76,5 @@ RUN pip install torch torchvision torchaudio --extra-index-url https://download.
 
 
 
-ENTRYPOINT ["/ros_entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bash"]
