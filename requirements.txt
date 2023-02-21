@@ -1,0 +1,21 @@
+PyYAML
+catkin_pkg
+torch 
+torchvision 
+torchaudio
+future
+numpy>=1.8
+plyfile>=0.4
+cython<=0.25.2
+scipy
+matplotlib
+llvmlite==0.31.0
+pyhull
+pytest
+colorama>=0.3.9
+numba
+pycollada
+-e git+https://github.com/jsll/curvox.git#egg=curvox
+-e git+https://github.com/crlab/binvox-rw-py.git#egg=binvox-rw
+-e git+https://github.com/CRLab/MeshLabXML.git#egg=meshlabxml
+

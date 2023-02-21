@@ -1,0 +1,13 @@
+dirmngr
+gnupg2
+zip 
+unzip
+wget
+libglu1-mesa
+libxmu6
+python2.7
+python-pip
+python-pytest
+git
+libpcl-dev
+vim
