@@ -29,6 +29,9 @@ RUN pip install -r /tmp/requirements.txt
 # Clean up
 RUN rm /tmp/requirements.txt
 
+RUN pip install -e git+https://github.com/CRLab/python-pcl.git#egg=python-pcl
+RUN pip install pymcubes==0.0.2
+
 # setup timezone
 # RUN echo 'Etc/UTC' > /etc/timezone && \
 #     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime
