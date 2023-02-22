@@ -18,4 +18,3 @@ pycollada
 -e git+https://github.com/jsll/curvox.git#egg=curvox
 -e git+https://github.com/crlab/binvox-rw-py.git#egg=binvox-rw
 -e git+https://github.com/CRLab/MeshLabXML.git#egg=meshlabxml
-

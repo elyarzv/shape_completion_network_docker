@@ -9,5 +9,10 @@ docker-run:
 		-v `pwd`:`pwd` \
 		--name shape_comp_net_container \
 		-it \
-		--workdir /home/elyar/thesis/ \
+		--workdir /$$HOME/thesis/shape_completion_network_docker \
 		ezavvari/shape_comp_net
+
+install-shape-comp-net:
+	pip install -e . && \
+	cp binvox_rw.py /usr/lib/python2.7/dist-packages/ && \
+	cp binvox_rw.py src/shape_reconstruction/shape_completion
